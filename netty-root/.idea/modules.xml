@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo1/demo1.iml" filepath="$PROJECT_DIR$/demo1/demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-01/hetangyuese-netty-01.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-01/hetangyuese-netty-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-02/hetangyuese-netty-02.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-02/hetangyuese-netty-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-root.iml" filepath="$PROJECT_DIR$/netty-root.iml" />
+    </modules>
+  </component>
+</project>
