@@ -28,6 +28,16 @@ public class HtNettyHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        // 创建一个池化缓冲区
+        ByteBuf byteBuf = ctx.alloc().buffer();
+        // 缓冲区写入数据
+        byteBuf.writeBytes("我就是不告诉你".getBytes());
+        // 发送给客户端
+        ctx.writeAndFlush(byteBuf);
+    }
+
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
         ctx.close();

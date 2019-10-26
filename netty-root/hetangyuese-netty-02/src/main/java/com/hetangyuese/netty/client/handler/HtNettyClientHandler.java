@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.CharsetUtil;
 
 /**
  * @program: netty-root
@@ -30,5 +31,20 @@ public class HtNettyClientHandler extends ChannelInboundHandlerAdapter {
         byteBuf.writeBytes(req);
         ctx.writeAndFlush(byteBuf);
 //        }
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        ByteBuf byteBuf = (ByteBuf)msg;
+
+       byte[] response = new byte[byteBuf.readableBytes()];
+
+       byteBuf.readBytes(response);
+
+       String str = new String(response, CharsetUtil.UTF_8);
+
+       System.out.println("服务端返回str： " + str);
+
+
     }
 }
