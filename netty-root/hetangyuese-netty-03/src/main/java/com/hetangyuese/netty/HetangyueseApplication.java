@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @program: netty-root
  * @description: 启动类
- * @author: hewen
+ * @author: hetangyuese
  * @create: 2019-10-28 16:47
  **/
 @SpringBootApplication
