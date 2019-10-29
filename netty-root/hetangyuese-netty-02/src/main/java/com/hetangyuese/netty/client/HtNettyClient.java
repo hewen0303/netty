@@ -34,6 +34,7 @@ public class HtNettyClient {
         try {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(workGroup)
+                    .option(ChannelOption.TCP_NODELAY, true)
                     .channel(NioSocketChannel.class)
                     .remoteAddress(new InetSocketAddress(ip, port))
                     .handler(new ChannelInitializer<SocketChannel>() {
