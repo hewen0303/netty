@@ -13,6 +13,8 @@
         <module>hetangyuese-netty-01</module>
         <module>hetangyuese-netty-02</module>
         <module>hetangyuese-netty-03</module>
+        <module>hetangyuese-netty-04</module>
+        <module>hetangyuese-netty-05</module>
     </modules>
 
     <parent>

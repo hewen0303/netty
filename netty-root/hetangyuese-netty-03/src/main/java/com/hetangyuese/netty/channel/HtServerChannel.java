@@ -1,5 +1,6 @@
 package com.hetangyuese.netty.channel;
 
+import com.hetangyuese.netty.decord.HtServerDecoder;
 import com.hetangyuese.netty.handler.HtServerHandler;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -21,6 +22,9 @@ public class HtServerChannel extends ChannelInitializer {
 
     @Autowired
     private HtServerHandler htServerHandler;
+
+    @Autowired
+    private HtServerDecoder htServerDecoder;
 
     @Override
     protected void initChannel(Channel ch) throws Exception {

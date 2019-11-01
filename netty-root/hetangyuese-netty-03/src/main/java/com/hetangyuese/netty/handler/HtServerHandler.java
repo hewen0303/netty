@@ -1,12 +1,17 @@
 package com.hetangyuese.netty.handler;
 
+import com.alibaba.fastjson.JSONObject;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.handler.codec.http.FullHttpRequest;
+import io.netty.util.CharsetUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 /**
  * @program: netty-root
@@ -16,25 +21,29 @@ import org.springframework.stereotype.Service;
  **/
 @ChannelHandler.Sharable
 @Service
-public class HtServerHandler extends ChannelInboundHandlerAdapter {
+public class HtServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     private Logger log = LoggerFactory.getLogger(HtServerHandler.class);
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         log.debug("channel已注册");
-        ctx.writeAndFlush(Unpooled.copiedBuffer("xixixix".getBytes()));
     }
 
-    /**
-     *  服务端接收到的数据
-     * @param ctx
-     * @param msg
-     * @throws Exception
-     */
+
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        log.debug("htServer receive" + (String)msg);
+    protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) throws Exception {
+        if (!StringUtils.isEmpty(msg)) {
+            log.debug("htServer receive: {}" +  msg);
+//            JSONObject object = JSONObject.parseObject(msg);
+//            Long userId = object.getLong("userId");
+//            if (null == userId) {
+//                ctx.writeAndFlush(Unpooled.copiedBuffer("请求参数userId为null：".getBytes(CharsetUtil.UTF_8)));
+//            }
+//            // 结束当前read传递给下一个handler
+//            ctx.fireChannelRead(object);
+        }
+//        ctx.writeAndFlush(Unpooled.copiedBuffer("请求参数为null：".getBytes(CharsetUtil.UTF_8)));
     }
 
     /**
@@ -44,7 +53,7 @@ public class HtServerHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush(Unpooled.copiedBuffer("Htserver readComplete".getBytes()));
+
     }
 
     /**
