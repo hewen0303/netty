@@ -13,6 +13,7 @@
         <module name="hetangyuese-netty-03" />
         <module name="hetangyuese-netty-04" />
         <module name="hetangyuese-netty-05" />
+        <module name="hetangyuese-netty-06" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
       <module name="hetangyuese-netty-03" target="1.6" />
       <module name="hetangyuese-netty-04" target="1.6" />
       <module name="hetangyuese-netty-05" target="1.6" />
+      <module name="hetangyuese-netty-06" target="1.6" />
       <module name="netty-root" target="1.6" />
     </bytecodeTargetLevel>
   </component>
