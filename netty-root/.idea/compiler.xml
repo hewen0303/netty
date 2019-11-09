@@ -10,15 +10,21 @@
         <module name="demo1-client" />
         <module name="hetangyuese-netty-01" />
         <module name="hetangyuese-netty-02" />
+        <module name="hetangyuese-netty-03" />
+        <module name="hetangyuese-netty-04" />
+        <module name="hetangyuese-netty-05" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="demo1" target="1.5" />
+      <module name="demo1" target="1.6" />
       <module name="demo1-client" target="1.5" />
       <module name="demo1-server" target="1.5" />
-      <module name="hetangyuese-netty-01" target="1.5" />
+      <module name="hetangyuese-netty-01" target="1.6" />
       <module name="hetangyuese-netty-02" target="1.6" />
-      <module name="netty-root" target="1.5" />
+      <module name="hetangyuese-netty-03" target="1.6" />
+      <module name="hetangyuese-netty-04" target="1.6" />
+      <module name="hetangyuese-netty-05" target="1.6" />
+      <module name="netty-root" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

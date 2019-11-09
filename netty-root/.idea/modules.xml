@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/demo1/demo1.iml" filepath="$PROJECT_DIR$/demo1/demo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-01/hetangyuese-netty-01.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-01/hetangyuese-netty-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-02/hetangyuese-netty-02.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-02/hetangyuese-netty-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-03/hetangyuese-netty-03.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-03/hetangyuese-netty-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-04/hetangyuese-netty-04.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-04/hetangyuese-netty-04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hetangyuese-netty-05/hetangyuese-netty-05.iml" filepath="$PROJECT_DIR$/hetangyuese-netty-05/hetangyuese-netty-05.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-root.iml" filepath="$PROJECT_DIR$/netty-root.iml" />
     </modules>
   </component>
