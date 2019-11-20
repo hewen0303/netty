@@ -1,6 +1,10 @@
 package com.hetangyuese.netty.server;
 
+import com.hetangyuese.netty.client.MyMessage;
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
@@ -35,6 +39,11 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
         byteBuf.readBytes(request);
         String body = new String(request, CharsetUtil.UTF_8);
         System.out.println("收到客户端发来的消息:" + body +  ", time: " + new Date().toLocaleString());
+
+
+
+//        String body = (String) msg;
+//        System.out.println("content:" + body);
     }
 
     @Override

@@ -15,7 +15,8 @@ public class MyClientChannelInitializer extends ChannelInitializer<SocketChannel
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ch.pipeline()
-//                .addLast(new MyClientEncode())
+                .addLast(new MyClientDecoder())
+                .addLast(new MyClientEncode())
                 .addLast(new MyClientHandler())
         ;
 

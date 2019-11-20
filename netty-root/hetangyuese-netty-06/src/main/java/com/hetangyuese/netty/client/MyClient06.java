@@ -28,7 +28,7 @@ public class MyClient06 {
             bootstrap.group(work)
                     .channel(NioSocketChannel.class)
                     .option(ChannelOption.AUTO_READ, true)
-                    .option(ChannelOption.TCP_NODELAY, true)
+                    .option(ChannelOption.TCP_NODELAY, false)
                     .handler(new MyClientChannelInitializer());
             System.out.println("客户端启动，准备连接服务端.....................");
             ChannelFuture future = bootstrap.connect(new InetSocketAddress(ip, port)).sync();
